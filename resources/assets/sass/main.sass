@@ -1,0 +1,47 @@
+//SETTINGS
+@import variables
+@import 'settings/animations';
+@import 'settings/breakpoints';
+@import 'settings/fonts';
+
+//TOOLS
+@import 'tools/functions'
+@import 'tools/mixins'
+
+//GENERIC
+@import '../../../node_modules/normalize-scss/sass/normalize'
+@include normalize()
+@import '../../../node_modules/foundation-sites/scss/foundation'
+@include foundation-xy-grid-classes
+
+//ELEMENTS
+@import 'elements/elements'
+
+//OBJECTS
+@import 'objects/pageLogement'
+@import 'objects/pageOuSeLoger'
+
+//COMPONENTS
+@import 'components/aside/asideOuSeLogerSearchFilters'
+
+@import 'components/btn/btn'
+
+@import 'components/cards/cardLogement'
+
+@import 'components/forms/formComment'
+
+@import 'components/header/headerLogement'
+
+@import 'components/pagination/pagination'
+
+@import 'components/section/sectionLogementInfo'
+@import 'components/section/sectionLogementReviews'
+@import 'components/section/sectionLogementTarifs'
+@import 'components/section/sectionOuSeLogerSearchResult'
+
+@import 'components/sliders/sliderLogement'
+
+//UTILS
+@import 'utils/utils'
+@include foundation-flex-classes
+@include foundation-visibility-classes

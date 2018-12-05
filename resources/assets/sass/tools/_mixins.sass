@@ -1,0 +1,17 @@
+
+=font-size($size)
+  font-size: calculate-rem($size);
+
+=line-height($size)
+  line-height: calculate-rem(1.42857*$size);
+
+=margin-top($size)
+  margin-top: calculate-rem($size);
+
+=margin-bottom($size)
+  margin-bottom: calculate-rem($size);
+
+=stagger-transitions($interval, $min, $max)
+  @for $i from $min through $max
+    &:nth-of-type(#{$i + 1})
+      transition-delay: #{$interval * $i}s

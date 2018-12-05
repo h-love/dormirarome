@@ -1,0 +1,53 @@
+.p-headerLogement
+  position: fixed
+  top: 0
+  left: 0
+  height: 40vh
+  width: 100%
+  z-index: -1
+
+  &__image,
+  &__filter
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    height: inherit
+    z-index: -1
+
+  &__image
+    background-size: cover
+    background-position: center
+    filter: grayscale(100)
+
+  &__filter
+    background-color: $red
+    opacity: .8
+
+  &__title
+    +font-size(72)
+    color: $white
+    position: absolute
+    top: 60px
+    left: 50%
+    transform: translateX(-50%)
+
+  &__meta
+    width: 100%
+    position: absolute
+    bottom: 15px
+    left: 50%
+    transform: translateX(-50%)
+
+    &__peopleNumber,
+    &__price,
+    &__bedroom,
+    &__location,
+    &__type
+      background-color: $white
+      padding: 5px 10px
+      border-radius: 10px
+      box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.3)
+
+      i
+        margin-right: 5px

@@ -1,0 +1,33 @@
+<section class="p-sectionOuSeLogerSearchResult">
+  <h2 class="p-sectionOuSeLogerSearchResult__title">
+    <span class="js-filterCount">{{logements|length}}</span>
+    correspondant à vos envies</h2>
+  <div class="p-sectionOuSeLogerSearchResult__isotope js-isotopeOuSeLoger">
+    <div class="p-sectionOuSeLogerSearchResult__isotope__gutterSizer js-gutterSizer"></div>
+    {% for logement in logements %}
+      {% set pricemin = logement.get_field('prix_minimum') %}
+      {% set pricemax = logement.get_field('prix_maximum') %}
+      {% set peoplemin = logement.get_field('nombre_voyageurs_minimum') %}
+      {% set peoplemax = logement.get_field('nombre_voyageurs_maximum') %}
+      {% set bedroom = logement.get_field('nombre_de_chambres') %}
+      {% set quartier = logement.get_field('quartier') %}
+      {% set type = logement.get_field('type_logement') %}
+      {% set smoke = logement.get_field('fumeur') %}
+      {% set pets = logement.get_field('animaux') %}
+      <div
+        class="p-sectionOuSeLogerSearchResult__isotope__item js-gridItem js-matched"
+        data-filter-pricemin="{{pricemin}}"
+        data-filter-pricemax="{{pricemax}}"
+        data-filter-peoplemin="{{peoplemin}}"
+        data-filter-peoplemax="{{peoplemax}}"
+        data-filter-bedroom="{{bedroom}}"
+        data-filter-quartier="{{quartier}}"
+        data-filter-type="{{type == 'Bed&Breakfast' ? 'bnb' : 'appartement'}}"
+        data-filter-smoke="{{smoke}}"
+        data-filter-pets="{{pets}}"
+      >
+        {% include 'modules/cards/cardLogement.twig' %}
+      </div>
+    {% endfor %}
+  </div>
+</section>

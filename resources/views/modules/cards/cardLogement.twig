@@ -1,0 +1,59 @@
+{% set type = logement.get_field('type_logement') %}
+<div class="p-cardLogement u-clickable js-cardLogement">
+  <div class="p-cardLogement__image">
+    <a href="{{logement.link}}">
+    <div class="p-cardLogement__image__carousel js-slider-logementCard owl-carousel owl-theme">
+      {% for image in logement.get_field('gallery') %}
+        <div
+          class="p-cardLogement__image__carousel__item"
+          style="background-image:  url('{{TimberImage(image)}}')"
+        ></div>
+      {% endfor %}
+    </div>
+    </a>
+    <div class="p-cardLogement__image__price">
+      à partir de {{logement.get_field('prix_minimum')}}€
+    </div>
+  </div>
+  <div class="p-cardLogement__ctt">
+    <a href="{{logement.link}}" class="u-linkOnDiv"></a>
+    <div class="p-cardLogement__ctt__title">
+      {{logement.title}}
+    </div>
+    <div class="p-cardLogement__ctt__separator"></div>
+    <div class="p-cardLogement__ctt__meta">
+      <i class="fas fa-users"></i>
+      {% if logement.get_field('nombre_voyageurs_minimum') == logement.get_field('nombre_voyageurs_maximum') %}
+        {{logement.get_field('nombre_voyageurs_minimum')}}
+      {% else %}
+        De
+        {{logement.get_field('nombre_voyageurs_minimum')}}
+        à
+        {{logement.get_field('nombre_voyageurs_maximum')}}
+      {% endif %}
+        voyageurs
+    </div>
+    <div class="p-cardLogement__ctt__meta">
+      <i class="fas fa-bed"></i>
+      {% set room_number = logement.get_field('nombre_de_chambres') %}
+      {{room_number}}
+      {% if room_number > 1 %}
+        chambres
+      {% else %}
+        chambre
+      {% endif %}
+    </div>
+    <div class="p-cardLogement__ctt__meta">
+      <i class="fas fa-map-marker-alt"></i>
+      {{logement.get_field('quartier')}}
+    </div>
+    <div class="p-cardLogement__ctt__meta">
+      {% if type == 'Bed&Breakfast' %}
+        <i class="fas fa-coffee"></i>
+      {% else %}
+        <i class="fas fa-building"></i>
+      {% endif %}
+      {{type}}
+    </div>
+  </div>
+</div>

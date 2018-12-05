@@ -1,0 +1,31 @@
+<section class="p-sectionLogementTarifs">
+  <div class="grid-container">
+    <div class="grid-x align-center">
+      <div class="cell small-12">
+        <h2 class="p-sectionLogementTarifs__title">Tarifs</h2>
+        <table class="p-sectionLogementTarifs__table">
+          <thead>
+            <tr>
+              {% for cell in post.get_field('tarifs')['header'] %}
+                <th>
+                  {{cell.c}}
+                </th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in post.get_field('tarifs')['body'] %}
+              <tr>
+                {% for cell in row %}
+                  <td>
+                    {{cell.c}}
+                  </td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

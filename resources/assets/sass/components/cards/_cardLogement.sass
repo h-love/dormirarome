@@ -1,0 +1,103 @@
+.p-cardLogement
+  $parent: &
+  position: relative
+  border-radius: 10px
+  box-shadow: 0 5px 16px 0 rgba(0, 0, 0, .3)
+  overflow: hidden
+
+  &:hover
+    #{$parent}__ctt
+      background-color: $redAlpha
+
+  &__image
+    position: relative
+
+    &__carousel
+      &__item
+        height: 200px
+        width: 100%
+        background-size: cover
+        background-position: center
+
+      .owl-nav:hover
+        .owl-prev,
+        .owl-next
+          opacity: 1
+
+      .owl-nav
+        position: absolute
+        z-index: 10
+        height: 100%
+        width: 100%
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        margin: 0
+        background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 20%) !important
+
+        .owl-prev,
+        .owl-next
+          color: $white !important
+          position: absolute
+          z-index: 200
+          height: 100%
+          width: 25px
+          margin: 0
+          opacity: 0
+          border-radius: 0 !important
+          transition: opacity .1s ease-in
+
+        .owl-prev
+          background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%) !important
+          left: 0
+
+        .owl-next
+          background: linear-gradient(to left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%) !important
+          right: 0
+
+      .owl-dots
+        position: absolute
+        z-index: 10
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+
+        .owl-dot
+          span
+            height: 5px
+            width: 5px
+            margin: 2px
+
+    &__price
+      position: absolute
+      top: 10px
+      left: 10px
+      z-index: 10
+      +font-size(12)
+      background-color: $white
+      padding: 5px 10px
+      border-radius: 10px
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3)
+
+  &__ctt
+    background-color: $white
+    position: relative
+    padding: 10px 20px
+    transition: background-color .2s ease-in
+
+    &__title
+      font-family: $font-secondary
+      +font-size(24)
+
+    &__separator
+      width: 100%
+      height: 2px
+      background-color: $black
+      margin: 5px 0
+
+    &__meta
+      +font-size(12)
+      padding: 5px 0
+
+      i
+        min-width: 20px

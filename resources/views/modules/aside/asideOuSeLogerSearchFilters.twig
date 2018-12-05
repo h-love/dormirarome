@@ -1,0 +1,90 @@
+<aside class="p-asideOuSeLogerSearchFilters">
+  <h2 class="p-asideOuSeLogerSearchFilters__title">J'affine ma recherche</h2>
+
+  <div class="grid-x">
+    <div class="small-8">
+      <h2  class="p-asideOuSeLogerSearchFilters__filterName">Prix par nuit</h2>
+      <div class="js-filterButtonGroup" data-filter-group="data-filter-function">
+        <div class="js-sliderPriceRange" data-filter-function="filterPrice"></div>
+      </div>
+      <input type="text" class="js-amount" readonly />
+    </div>
+    <div class="small-6">
+      <h2 class="p-asideOuSeLogerSearchFilters__filterName">Nombre de voyageurs</h2>
+      <select id="filterPeople" class="js-filterButtonGroup u-clickable" data-filter-group="data-filter-function">
+        <option data-filter-function="filterPeople" value="">Peu importe</option>
+        <option data-filter-function="filterPeople" value="2">2 voyageurs</option>
+        <option data-filter-function="filterPeople" value="3">3 voyageurs</option>
+        <option data-filter-function="filterPeople" value="4">4 voyageurs</option>
+      </select> 
+    </div>
+    <div class="small-6">
+      <h2 class="p-asideOuSeLogerSearchFilters__filterName">Nombre de chambres</h2>
+      <select class="p-asideOuSeLogerSearchFilters__select js-filterButtonGroup u-clickable" data-filter-group="data-filter-bedroom">
+        <option data-filter-bedroom="">Peu importe</option>
+        <option data-filter-bedroom="1">1 chambre</option>
+        <option data-filter-bedroom="2">2 chambres</option>
+      </select> 
+    </div>
+    <div class="small-12">
+      <h2 class="p-asideOuSeLogerSearchFilters__filterName">Quartiers</h2>
+      <div class="p-asideOuSeLogerSearchFilters__filter js-filterButtonGroup" data-filter-group="data-filter-quartier">
+
+        <input type="checkbox" id="quartierBarberini/Spagna" data-filter-quartier="Barberini/Spagna" class="hide" />
+        <label for="quartierBarberini/Spagna">Barberini/Spagna</label>
+    
+        <input type="checkbox" id="quartierColosseoMonti" data-filter-quartier="Colosseo Monti" class="hide" />
+        <label for="quartierColosseoMonti">Colosseo Monti</label>
+    
+        <input type="checkbox" id="quartierColosseoSanGiovanni" data-filter-quartier="Colosseo San Giovanni" class="hide" />
+        <label for="quartierColosseoSanGiovanni">Colosseo San Giovanni</label>
+    
+        <input type="checkbox" id="quartierNavonaPantheon" data-filter-quartier="Navona Pantheon" class="hide" />
+        <label for="quartierNavonaPantheon">Navona Pantheon</label>
+    
+        <input type="checkbox" id="quartierTermini" data-filter-quartier="Termini" class="hide" />
+        <label for="quartierTermini">Termini</label>
+    
+        <input type="checkbox" id="quartierTestaccioOstiense" data-filter-quartier="Testaccio Ostiense" class="hide" />
+        <label for="quartierTestaccioOstiense">Testaccio Ostiense</label>
+    
+        <input type="checkbox" id="quartierTrastevereNord" data-filter-quartier="Trastevere Nord" class="hide" />
+        <label for="quartierTrastevereNord">Trastevere Nord</label>
+    
+        <input type="checkbox" id="quartierTrastevereSud" data-filter-quartier="Trastevere Sud" class="hide" />
+        <label for="quartierTrastevereSud">Trastevere Sud</label>
+    
+        <input type="checkbox" id="quartierVatican" data-filter-quartier="Vatican" class="hide" />
+        <label for="quartierVatican">Vatican</label>
+
+        <input type="checkbox" id="quartierAny" data-filter-quartier="" class="js-all hide" checked />
+        <label for="quartierAny">Peu importe</label>
+      </div>
+
+      <h2 class="p-asideOuSeLogerSearchFilters__filterName">Type</h2>
+      <div class="p-asideOuSeLogerSearchFilters__filter js-filterButtonGroup" data-filter-group="data-filter-type">
+        <input type="checkbox" id="typeAppartement" data-filter-type="appartement" class="hide" />
+        <label for="typeAppartement">Appartement</label>
+
+        <input type="checkbox" id="typeBnb" data-filter-type="bnb" class="hide" />
+        <label for="typeBnb">Bed&Breakfast</label>
+
+        <input type="checkbox" id="typeAny" data-filter-type="" class="js-all hide" checked />
+        <label for="typeAny">Peu Importe</label>
+      </div>
+
+      <h2 class="p-asideOuSeLogerSearchFilters__filterName">Autres</h2>
+      <div class="p-asideOuSeLogerSearchFilters__filter">
+        <div class="js-filterButtonGroup" data-filter-group="data-filter-smoke">
+          <input type="checkbox" id="smoke" data-filter-smoke="Fumeur" class="hide" />
+          <label for="smoke">Fumeur</label>
+        </div>
+        <div class="js-filterButtonGroup" data-filter-group="data-filter-pets">
+          <input type="checkbox" id="pets" data-filter-pets="Admis" class="hide" />
+          <label for="pets">Animaux admis</label>
+        </div>
+      </div>
+    </div>
+    <div class="p-asideOuSeLogerSearchFilters__btn p-btn p-btn--brownBkg js-applyFilters">Appliquer</div>
+  </div>
+</aside>

@@ -1,0 +1,10 @@
+<div class="p-sliderLogement">
+  <div class="p-sliderLogement__carousel js-slider-logement owl-carousel owl-theme">
+    {% for image in post.get_field('gallery') %}
+      <div
+        class="p-sliderLogement__carousel__item"
+        style="background-image:  url('{{TimberImage(image)}}')"
+      ></div>
+    {% endfor %}
+  </div>
+</div>

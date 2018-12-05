@@ -1,0 +1,29 @@
+<nav class="p-pagination">
+  <ul class="p-pagination__ctt">
+    {% if pagination.prev %}
+      <li class="p-pagination__ctt__prev">
+        <a href="{{ pagination.prev.link }}">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+      </li>
+    {% endif %}
+    {% for page in pagination.pages %}
+      {% if page.link %}
+        <li class="p-pagination__ctt__page">
+          <a href="{{ page.link }}" class="{{ page.class }}">{{ page.title }}</a>
+        </li>
+      {% else %}
+        <li class="p-pagination__ctt__page--current">
+          <span class="{{ page.class }}"><b>{{ page.title }}</b></span>
+        </li>
+      {% endif %}
+    {% endfor %}
+    {% if pagination.next %}
+      <li class="p-pagination__ctt__next">
+        <a href="{{ pagination.next.link }}">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>

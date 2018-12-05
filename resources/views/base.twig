@@ -1,0 +1,15 @@
+{% include 'modules/header/index.twig' %}
+
+<section>
+  <div>
+    <div>
+      {% block content %}
+        {{ messages.base.no_content }}
+      {% endblock %}
+    </div>
+  </div>
+</section>
+
+{% include 'modules/footer/index.twig' %}
+
+

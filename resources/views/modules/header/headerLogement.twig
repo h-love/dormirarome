@@ -1,0 +1,54 @@
+<header class="p-headerLogement">
+  <div
+    class="p-headerLogement__image"
+    style="background-image: url({{post.thumbnail}})"
+  ></div>
+  <div class="p-headerLogement__filter"></div>
+  <div class="grid-container u-relative u-height100Percent">
+    <h1 class="p-headerLogement__title u-noMargin">{{post.title}}</h1>
+    <div class="p-headerLogement__meta flex-container align-spaced">
+      <div class="p-headerLogement__meta__price">
+        <i class="fas fa-coins"></i>
+        entre
+        {{post.get_field('prix_minimum')}}
+        et
+        {{post.get_field('prix_maximum')}}€ par nuit
+      </div>
+      <div class="p-headerLogement__meta__peopleNumber">
+        <i class="fas fa-users"></i>
+        {% if post.get_field('nombre_voyageurs_minimum') == post.get_field('nombre_voyageurs_maximum') %}
+          {{post.get_field('nombre_voyageurs_minimum')}}
+        {% else %}
+          De
+          {{post.get_field('nombre_voyageurs_minimum')}}
+          à
+          {{post.get_field('nombre_voyageurs_maximum')}}
+        {% endif %}
+          voyageurs
+      </div>
+      <div class="p-headerLogement__meta__bedroom">
+        <i class="fas fa-bed"></i>
+        {% set room_number = post.get_field('nombre_de_chambres') %}
+        {{room_number}}
+        {% if room_number > 1 %}
+          chambres
+        {% else %}
+          chambre
+        {% endif %}
+      </div>
+      <div class="p-headerLogement__meta__location">
+        <i class="fas fa-map-marker-alt"></i>
+        {{post.get_field('quartier')}}
+      </div>
+      <div class="p-headerLogement__meta__type">
+        {% set type = post.get_field('type_logement') %}
+        {% if type == 'Bed&Breakfast' %}
+          <i class="fas fa-coffee"></i>
+        {% else %}
+          <i class="fas fa-building"></i>
+        {% endif %}
+        {{type}}
+      </div>
+    </div>
+  </div>
+</header>

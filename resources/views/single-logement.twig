@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <div class="o-pageLogement">
+    <div class="o-pageLogement__header">
+      {% include 'modules/header/headerLogement.twig' %}
+    </div>
+    <div class="o-pageLogement__body">
+      <div class="grid-x">
+        <div class="cell small-6">
+          {% include 'modules/section/sectionLogementInfo.twig' %}
+        </div>
+        <div class="cell small-6">
+          <div class="o-pageLogement__body__sticky">
+            {% include 'modules/sliders/sliderLogement.twig' %}
+            {% include 'modules/section/sectionLogementTarifs.twig' %}
+          </div>
+        </div>
+        <div class="cell small-12">
+          {% include 'modules/section/sectionLogementReviews.twig' %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <div class="o-pageOuSeLoger">
+    <div class="grid-container">
+      <div class="o-pageOuSeLoger__body">
+        <div class="grid-x grid-margin-x">
+          <div class="cell small-8">
+            <h1>Ou se loger</h1>
+            {% include 'modules/section/sectionOuSeLogerSearchResult.twig' %}
+            {% if logements.pagination %}
+              {% include 'modules/pagination/pagination.twig' with {
+                pagination: logements.pagination
+              } %}
+            {% endif %}
+          </div>
+          <div class="o-pageOuSeLoger__body__aside cell small-4">
+            {% include 'modules/aside/asideOuSeLogerSearchFilters.twig' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

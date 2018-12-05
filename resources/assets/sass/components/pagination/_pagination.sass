@@ -1,0 +1,26 @@
+.p-pagination
+  &__ctt
+    padding: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $red
+
+    li
+      color: $red
+      margin: 0 10px
+      list-style-type: none
+      display: inline-block
+
+    &__page
+      a
+        color: $red
+        text-decoration: none
+
+      &--current
+        +font-size(18)
+
+    &__prev,
+    &__next
+      a
+        color: $red
