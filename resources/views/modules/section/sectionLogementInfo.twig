@@ -5,138 +5,208 @@
   </section>
   <section>
     <h2 class="p-sectionLogementInfo__title">Descriptif</h2>
-    {% if post.get_field('logementdescriptif_appartement')|length %}
-    <div class="p-sectionLogementInfo__appartement">
-      <i class="fas fa-building"></i>
-      {{post.get_field('logementdescriptif_appartement')}}
+    <div class="flex-container u-flexWrap">
+      {% if post.get_field('logementdescriptif_appartement')|length %}
+      <div class="p-sectionLogementInfo__appartement">
+        <i class="fas fa-building"></i>
+        {{post.get_field('logementdescriptif_appartement')}}
+      </div>
+      {% endif %}
+      {% if post.get_field('logementdescriptif_chambre')|length %}
+      <div class="p-sectionLogementInfo__chambre">
+        <i class="fas fa-bed"></i>
+        {{post.get_field('logementdescriptif_chambre')}}
+      </div>
+      {% endif %}
+      {% if post.get_field('logementdescriptif_salle_deau')|length  %}
+      <div class="p-sectionLogementInfo__cuisine">
+        <i class="fas fa-tint"></i>
+        {{post.get_field('logementdescriptif_salle_deau')}}
+      </div>
+      {% endif %}
+      {% if post.get_field('logementdescriptif_cuisine')|length  %}
+      <div class="p-sectionLogementInfo__cuisine">
+        <i class="fas fa-mortar-pestle"></i>
+        {{post.get_field('logementdescriptif_cuisine')}}
+      </div>
+      {% endif %}
+      {% if post.get_field('logementdescriptif_salon')|length  %}
+      <div class="p-sectionLogementInfo__salon">
+        <i class="fas fa-couch"></i>
+        {{post.get_field('logementdescriptif_salon')}}
+      </div>
+      {% endif %}
     </div>
-    {% endif %}
-    {% if post.get_field('logementdescriptif_chambre')|length %}
-    <div class="p-sectionLogementInfo__chambre">
-      <i class="fas fa-bed"></i>
-      {{post.get_field('logementdescriptif_chambre')}}
-    </div>
-    {% endif %}
-    {% if post.get_field('logementdescriptif_salle_deau')|length  %}
-    <div class="p-sectionLogementInfo__cuisine">
-      <i class="fas fa-tint"></i>
-      {{post.get_field('logementdescriptif_salle_deau')}}
-    </div>
-    {% endif %}
-    {% if post.get_field('logementdescriptif_cuisine')|length  %}
-    <div class="p-sectionLogementInfo__cuisine">
-      <i class="fas fa-mortar-pestle"></i>
-      {{post.get_field('logementdescriptif_cuisine')}}
-    </div>
-    {% endif %}
-    {% if post.get_field('logementdescriptif_salon')|length  %}
-    <div class="p-sectionLogementInfo__salon">
-      <i class="fas fa-couch"></i>
-      {{post.get_field('logementdescriptif_salon')}}
-    </div>
-    {% endif %}
   </section>
   <section>
     <h2 class="p-sectionLogementInfo__title">Equipements</h2>
-    {% if post.get_field('logementequipements_cuisine')|length  %}
-    <div class="p-sectionLogementInfo__cuisine">
-      <i class="fas fa-couch"></i>
-      {{post.get_field('logementequipements_cuisine')}}
+    <div class="flex-container u-flexWrap">
+      {% if post.get_field('logementequipements_cuisine')|length  %}
+      <div class="p-sectionLogementInfo__cuisine">
+        <i class="fas fa-mortar-pestle"></i>
+        {{post.get_field('logementequipements_cuisine')}}
+      </div>
+      {% endif %}
+      {% if post.get_field('logementequipements_eau')|length  %}
+      <div class="p-sectionLogementInfo__eau">
+        <i class="fas fa-tint"></i>
+        {{post.get_field('logementequipements_eau')}}
+      </div>
+      {% endif %}
+      {% if post.get_field('logementequipements_electricite')|length  %}
+      <div class="p-sectionLogementInfo__electricite">
+        <i class="fas fa-bolt"></i>
+        {{post.get_field('logementequipements_electricite')}}
+      </div>
+      {% endif %}
+      {% if post.get_field('logementequipements_divertissement')|length  %}
+      <div class="p-sectionLogementInfo__divertissement">
+        <i class="fas fa-tv"></i>
+        {{post.get_field('logementequipements_divertissement')}}
+      </div>
+      {% endif %}
+      {% if post.get_field('logementequipements_temperature')|length  %}
+      <div class="p-sectionLogementInfo__temperature">
+        <i class="fas fa-thermometer-half"></i>
+        {{post.get_field('logementequipements_temperature')}}
+      </div>
+      {% endif %}
+      {% if post.get_field('logementequipements_internet')|length  %}
+      <div class="p-sectionLogementInfo__internet">
+        <i class="fas fa-wifi"></i>
+        {{post.get_field('logementequipements_internet')}}
+      </div>
+      {% endif %}
+      {% if post.get_field('logementequipements_lit')|length  %}
+      <div class="p-sectionLogementInfo__lit">
+        <i class="fas fa-bed"></i>
+        {{post.get_field('logementequipements_lit')}}
+      </div>
+      {% endif %}
     </div>
-    {% endif %}
-    {% if post.get_field('logementequipements_eau')|length  %}
-    <div class="p-sectionLogementInfo__eau">
-      <i class="fas fa-couch"></i>
-      {{post.get_field('logementequipements_eau')}}
-    </div>
-    {% endif %}
-    {% if post.get_field('logementequipements_electricite')|length  %}
-    <div class="p-sectionLogementInfo__electricite">
-      <i class="fas fa-couch"></i>
-      {{post.get_field('logementequipements_electricite')}}
-    </div>
-    {% endif %}
-    {% if post.get_field('logementequipements_divertissement')|length  %}
-    <div class="p-sectionLogementInfo__divertissement">
-      <i class="fas fa-couch"></i>
-      {{post.get_field('logementequipements_divertissement')}}
-    </div>
-    {% endif %}
-    {% if post.get_field('logementequipements_temperature')|length  %}
-    <div class="p-sectionLogementInfo__temperature">
-      <i class="fas fa-couch"></i>
-      {{post.get_field('logementequipements_temperature')}}
-    </div>
-    {% endif %}
-    {% if post.get_field('logementequipements_internet')|length  %}
-    <div class="p-sectionLogementInfo__internet">
-      <i class="fas fa-couch"></i>
-      {{post.get_field('logementequipements_internet')}}
-    </div>
-    {% endif %}
-    {% if post.get_field('logementequipements_lit')|length  %}
-    <div class="p-sectionLogementInfo__lit">
-      <i class="fas fa-couch"></i>
-      {{post.get_field('logementequipements_lit')}}
-    </div>
-    {% endif %}
   </section>
   <section>
-    <h2 class="p-sectionLogementInfo__title" >Conditions</h2>
-    {% if post.get_field('taxe_touristique')|length  %}
-    <div class="p-sectionLogementInfo__condition">
-      <i class="fas fa-coins"></i>
-      Taxe touristique : {{post.get_field('taxe_touristique')}}
+    <h2 class="p-sectionLogementInfo__title">Conditions</h2>
+    <div class="flex-container u-flexWrap">
+      {% if post.get_field('taxe_touristique')|length  %}
+      <div class="p-sectionLogementInfo__condition">
+        <i class="fas fa-coins"></i>
+        <div>
+          <b>Taxe touristique</b><br />
+          {{post.get_field('taxe_touristique')}}
+        </div>
+      </div>
+      {% endif %}
+      {% if post.get_field('sejour_minimum')|length  %}
+      <div class="p-sectionLogementInfo__condition">
+        <i class="far fa-clock"></i>
+        <div>
+          <b>Séjour minimum</b><br />
+          {{post.get_field('sejour_minimum')}}
+        </div>
+      </div>
+      {% endif %}
+      {% if post.get_field('draps_et_linge')|length  %}
+      <div class="p-sectionLogementInfo__condition">
+        <i class="fas fa-scroll"></i>
+        <div>
+          <b>Draps et linge</b><br />
+          {{post.get_field('draps_et_linge')}}
+        </div>
+      </div>
+      {% endif %}
+      {% if post.get_field('animaux')|length  %}
+      <div class="p-sectionLogementInfo__condition">
+        <i class="fas fa-paw"></i>
+        <div>
+          <b>Animaux</b><br />
+          {{post.get_field('animaux')}}
+        </div>
+      </div>
+      {% endif %}
+      {% if post.get_field('fumeur')|length  %}
+      <div class="p-sectionLogementInfo__condition">
+        <i class="fas fa-smoking"></i>
+        <div>
+          <b>Fumeur/Non fumeur</b><br />
+          {{post.get_field('fumeur')}}
+        </div>
+      </div>
+      {% endif %}
     </div>
-    {% endif %}
-    {% if post.get_field('sejour_minimum')|length  %}
-    <div class="p-sectionLogementInfo__condition">
-      <i class="far fa-clock"></i>
-      Séjour minimum : {{post.get_field('sejour_minimum')}}
-    </div>
-    {% endif %}
-    {% if post.get_field('draps_et_linge')|length  %}
-    <div class="p-sectionLogementInfo__condition">
-      <i class="fas fa-scroll"></i>
-      Draps et linge {{post.get_field('draps_et_linge')}}
-    </div>
-    {% endif %}
-    {% if post.get_field('animaux')|length  %}
-    <div class="p-sectionLogementInfo__condition">
-      <i class="fas fa-paw"></i>
-      Animaux {{post.get_field('animaux')}}
-    </div>
-    {% endif %}
-    {% if post.get_field('fumeur')|length  %}
-    <div class="p-sectionLogementInfo__condition">
-      <i class="fas fa-smoking"></i>
-      {{post.get_field('fumeur')}}
-    </div>
-    {% endif %}
   </section>
   <section>
     <h2 class="p-sectionLogementInfo__title" >Transport</h2>
-    {% if post.get_field('fumeur')|length  %}
-    <div class="p-sectionLogementInfo__metro">
-      <i class="fas fa-smoking"></i>
-      {{post.get_field('metro')}}
+    <div class="flex-container u-flexWrap">
+      {% if post.get_field('metro')|length  %}
+      <div class="p-sectionLogementInfo__metro">
+        <i class="fas fa-subway"></i>
+        <div>
+          <b>Metro</b><br />
+          {{post.get_field('metro')}}
+        </div>
+      </div>
+      {% endif %}
+      {% if post.get_field('bus')|length  %}
+      <div class="p-sectionLogementInfo__bus">
+        <i class="fas fa-bus"></i>
+        <div>
+          <b>Bus</b><br />
+          {{post.get_field('bus')}}
+        </div>
+      </div>
+      {% endif %}
+      {% if post.get_field('tramway')|length  %}
+      <div class="p-sectionLogementInfo__bus">
+        <i class="fas fa-train"></i>
+        <div>
+          <b>Tramway</b><br />
+          {{post.get_field('tramway')}}
+        </div>
+      </div>
+      {% endif %}
     </div>
-    {% endif %}
-    {% if post.get_field('fumeur')|length  %}
-    <div class="p-sectionLogementInfo__bus">
-      <i class="fas fa-smoking"></i>
-      {{post.get_field('bus')}}
-    </div>
-    {% endif %}
   </section>
   <section>
     <h2 class="p-sectionLogementInfo__title" >A pied</h2>
-    {% if post.get_field('fumeur')|length  %}
-    <div class="p-sectionLogementInfo__apied">
-      <i class="fas fa-smoking"></i>
-      {{post.get_field('a_pied')}}
+    <div class="flex-container u-flexWrap">
+      {% if post.get_field('piazza_navona')|length  %}
+      <div class="p-sectionLogementInfo__apied">
+        <i class="fas fa-smoking"></i>
+        <div>
+          <b>Piazza Navona</b><br />
+          {{post.get_field('piazza_navona')}}
+        </div>
+      </div>
+      {% endif %}
+      {% if post.get_field('colosseo')|length  %}
+      <div class="p-sectionLogementInfo__apied">
+        <i class="fas fa-smoking"></i>
+        <div>
+          <b>Colosseo</b><br />
+          {{post.get_field('colosseo')}}
+        </div>
+      </div>
+      {% endif %}
+      {% if post.get_field('fontana_di_trevi')|length  %}
+      <div class="p-sectionLogementInfo__apied">
+        <i class="fas fa-smoking"></i>
+        <div>
+          <b>Fontana di Trevi</b><br />
+          {{post.get_field('fontana_di_trevi')}}
+        </div>
+      </div>
+      {% endif %}
+      {% if post.get_field('piazza_san_pietro')|length  %}
+      <div class="p-sectionLogementInfo__apied">
+        <i class="fas fa-smoking"></i>
+        <div>
+          <b>Piazza San Pietro</b><br />
+          {{post.get_field('piazza_san_pietro')}}
+        </div>
+      </div>
+      {% endif %}
     </div>
-    {% endif %}
   </section>
   <div>
     <h2 class="p-sectionLogementInfo__title" >Localisation</h2>

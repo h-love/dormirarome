@@ -17,9 +17,19 @@
           </div>
         </div>
         <div class="cell small-12">
+          {% include 'modules/section/sectionLogementLinks.twig' %}
           {% include 'modules/section/sectionLogementReviews.twig' %}
+        </div>
+        <div class="cell small-12">
+          {% include 'modules/footer/footerLogement.twig' %}
         </div>
       </div>
     </div>
+  </div>
+  <div class="js-popup js-popupBooking js-popupBookingClose p-popup flex-container align-center align-middle">
+    {% include 'modules/popups/popupBooking.twig' %}
+  </div>
+  <div class="js-popup js-popupSlider js-popupSliderClose p-popup flex-container align-center align-middle">
+    {% include 'modules/popups/popupSlider.twig' %}
   </div>
 {% endblock %}

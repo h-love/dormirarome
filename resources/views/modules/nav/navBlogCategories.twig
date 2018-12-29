@@ -1,0 +1,9 @@
+<nav class="p-navBlogCategories">
+  <div class="grid-container">
+    <div class="p-navBlogCategories__ctt grid-x align-center align-middle">
+      {% for item in navBlogCategories.items %}
+       <a class="p-navBlogCategories__ctt__link" href="{{item.link}}">{{item.title}}</a>
+      {% endfor %}
+    </div>
+  </div>
+</nav>

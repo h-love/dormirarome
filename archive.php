@@ -13,12 +13,19 @@ if (is_day()) {
 } elseif (is_tag()) {
     $context['title'] = 'Tag: ' . single_tag_title('', false);
 } elseif (is_category()) {
-    $context['title'] = 'Category: ' . single_cat_title('', false);
+    $context['title'] = '' . single_cat_title('', false);
     array_unshift($templates, 'archive-' . get_query_var('cat') . '.twig');
 } elseif (is_post_type_archive()) {
     $context['title'] = post_type_archive_title('', false);
     array_unshift($templates, 'archive-' . get_post_type() . '.twig');
 }
+
+$args = array(
+  'post_type' => 'post',
+  'category__not_in' => 3, //3 = id logement
+  'posts_per_page' => 9,
+  'paged' => $paged
+);
 
 $context['posts']      = new Timber\PostQuery();
 $context['pagination'] = Timber::get_pagination($pagination_mid_size);

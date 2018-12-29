@@ -7,7 +7,8 @@
 $context = Timber::get_context();
 
 $args = array(
-  'post_category' => 'Logement',
+  'post_type' => 'post',
+  'category__in' => 3, //3 = id logement
   'posts_per_page' => 90,
 );
 

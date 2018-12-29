@@ -1,5 +1,19 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  body
+  <div class="o-page">
+    <div class="o-page__header">
+      {% include 'modules/header/headerHome.twig' %}
+    </div>
+    <div class="o-page__body">
+      <div class="u-bkgRed">
+        {% include 'modules/section/sectionNewsletter.twig' %}
+      </div>
+      <div class="grid-x align-center">
+        <div class="cell small-4">
+          {% include 'modules/section/sectionWhoAmI.twig' %}
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

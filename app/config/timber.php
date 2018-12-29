@@ -65,6 +65,9 @@ function add_to_context($data)
 {
     // Add Main Menu to Timber context object
     $data['menu'] = new TimberMenu();
+    $data['navMain'] = new \Timber\Menu( 'menuMain' );
+    $data['navBlogCategories'] = new \Timber\Menu( 'menuBlogCategories' );
+
 
     // Add main-sidebar to Timber context object
     $data['main_sidebar'] = Timber::get_widgets('main-sidebar');

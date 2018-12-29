@@ -1,0 +1,24 @@
+<div class="p-cardBlogPost">
+  <a
+    href="{{item.link}}"
+    class="u-linkOnDiv"
+    target="{{targetBlank ? 'blank_' : ''}}"
+  ></a>
+  <div
+    class="p-cardBlogPost__tag"
+    style="background-color: {{item.category.get_field('color')}}"
+  >
+    {{item.category}}
+  </div>
+  <div class="p-cardBlogPost__thumbnail"
+    {% if item.thumbnail %}
+      style="background-image:url('{{item.thumbnail ? item.thumbnail}}')"
+    {% else %}
+      style="background-image:url('{{site.url}}/wp-content/themes/dormirarome/static/images/home.png')"
+    {% endif %}
+  >
+  </div>
+  <div class="p-cardBlogPost__text">
+    <h3 class="p-cardBlogPost__text__title">{{item.title}}</h3>
+  </div>
+</div>

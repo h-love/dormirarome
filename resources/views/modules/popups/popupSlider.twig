@@ -1,0 +1,14 @@
+<div class="p-popupSlider js-popupContent">
+  <div class="p-popup__ctt__close p-popup__ctt__close--white js-popupSliderClose u-clickable">
+    <div></div>
+    <div></div>
+  </div>
+  <div class="p-popupSlider__carousel js-slider-logement owl-carousel owl-theme">
+    {% for image in post.get_field('gallery') %}
+      <div
+        class="p-popupSlider__carousel__item"
+        style="background-image: url('{{TimberImage(image)}}')"
+      ></div>
+    {% endfor %}
+  </div>
+</div>

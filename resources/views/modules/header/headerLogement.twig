@@ -5,7 +5,15 @@
   ></div>
   <div class="p-headerLogement__filter"></div>
   <div class="grid-container u-relative u-height100Percent">
-    <h1 class="p-headerLogement__title u-noMargin">{{post.title}}</h1>
+    <h1 class="p-headerLogement__title u-noMargin">
+      {% set type = post.get_field('type_logement') %}
+      {% if type == 'Bed&Breakfast' %}
+       B&B
+      {% else %}
+       Casa
+      {% endif %}
+      {{post.title}}
+    </h1>
     <div class="p-headerLogement__meta flex-container align-spaced">
       <div class="p-headerLogement__meta__price">
         <i class="fas fa-coins"></i>

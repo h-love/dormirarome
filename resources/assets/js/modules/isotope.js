@@ -229,7 +229,7 @@ const isotope = () => {
   }
 
   window.addEventListener('scroll', () => {
-    if($(document).height() - $(window).height() - 100  <= pageYOffset) {
+    if($(document).height() - $(window).height() - 600  <= pageYOffset) {
       itemsVisibleNumber += 3
       addVisibleItems();
     }

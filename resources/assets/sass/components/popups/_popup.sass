@@ -1,0 +1,55 @@
+.p-popup
+  position: fixed
+  top: 0
+  left: 0
+  height: 100vh
+  width: 100vw
+  z-index: 100000
+  background-color: rgba(0,0,0,.9)
+  opacity: 0
+  visibility: hidden
+  transition: opacity .1s ease-in, visibility .1s
+
+  &.active
+    visibility: visible
+    opacity: 1
+
+  &__ctt
+    position: relative
+    background-color: $brown
+    padding: 5px
+    border-radius: 10px
+    width: 500px
+
+    &__title
+      text-align: center
+
+    &__close
+      position: absolute
+      z-index: 100000
+      top: 10px
+      right: 10px
+      height: 24px
+      width: 20px
+
+      div
+        position: absolute
+        top: 0
+        width: 28px
+        height: 3px
+        background-color: $black
+        border-radius: 5px
+
+        &:first-child
+          left: 0
+          transform-origin: left
+          transform: rotate(45deg)
+
+        &:last-child
+          right: 0
+          transform-origin: right
+          transform: rotate(-45deg)
+
+      &--white
+        div
+          background-color: $white

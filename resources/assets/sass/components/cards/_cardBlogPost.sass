@@ -1,0 +1,34 @@
+.p-cardBlogPost
+  background-color: $white
+  position: relative
+  border-radius: 10px
+  box-shadow: 0 5px 16px 0 rgba(0, 0, 0, .3)
+  overflow: hidden
+  transition: transform .1s ease-in
+
+  &:hover
+    transform: translateY(-5px)
+
+  &__tag
+    position: absolute
+    top: 10px
+    left: 10px
+    border-radius: 5px
+    padding: 5px 10px
+    background-color: $white
+    text-transform: uppercase
+    color: $white
+    font-family: $font-secondary
+    letter-spacing: 1.2px
+
+  &__thumbnail
+    height: 150px
+    background-color: $red
+    background-size: cover
+    background-position: center
+
+  &__text
+    padding: 5px
+
+    &__title
+      margin: 0

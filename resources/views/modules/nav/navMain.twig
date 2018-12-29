@@ -1,0 +1,17 @@
+<nav class="p-navMain">
+  <div class="grid-container">
+    <div class="p-navMain__ctt grid-x align-justify align-middle">
+      <div class="p-navMain__ctt__left">
+        <a class="p-navMain__ctt__left__link" href="{{site.url}}">
+          <img class="p-navMain__ctt__left__link__image" src="{{site.url}}/wp-content/themes/dormirarome/static/images/logo_navbar.png" alt="Logo Dormir à Rome" />
+          <span class="p-navMain__ctt__left__link__text">Dormir à Rome</span>
+        </a>
+      </div>
+      <div class="p-navMain__ctt__right">
+        {% for item in navMain.items %}
+         <a class="p-navMain__ctt__right__link" href="{{item.link}}">{{item.title}}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</nav>

@@ -8,6 +8,7 @@ import 'owl.carousel'
 import carousel from './modules/carousel'
 import isotope from './modules/isotope'
 import map from './modules/map'
+import popup from './modules/popup'
 import slider from './modules/slider'
 
 $(document).ready(() => {
@@ -19,6 +20,10 @@ $(document).ready(() => {
 
   if($("#map").length >= 1) {
     map();
+  }
+
+  if($(".js-popup").length >= 1) {
+    popup();
   }
 
   slider();

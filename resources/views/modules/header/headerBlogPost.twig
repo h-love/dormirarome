@@ -1,0 +1,8 @@
+<header class="p-headerBlogPost"
+  {% if post.thumbnail %}
+    style="background-image:url('{{post.thumbnail ? post.thumbnail}}')"
+  {% else %}
+    style="background-image:url('{{site.url}}/wp-content/themes/dormirarome/static/images/home.png')"
+  {% endif %}
+>
+</header>
